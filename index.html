@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Play Rock Paper Scissor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <h1>Play rock paper scissor game</h1>
     <div class="scoreboard">
@@ -15,19 +17,55 @@
     </div>
     <div class="dashboard">
         <button class="js-rock-btn" onclick="
-            console.log('rock btn clicked')
-            ">Rock</button>
+            let playerMove = '';
+            let computerMove;
+            computerMoves(computerMove);
+
+        //     const randomNum = Math.random();
+        //     let result = '';
+        //     if(randomNum > 0 && randomNum < 1/3){
+        //         computerMove1 = 'rock';
+        //     }else if(randomNum > 1/3 && randomNum < 2/3){
+        //         computerMove1 = 'paper';
+        //     }
+        //     else if(randomNum > 2/3 && randomNum < 1){
+        //         computerMove1 = 'scissor';
+        //     }
+        //     // console.log(randomNum);
+        //     // console.log(computerMove1)
+        //     if(computerMove1 === 'rock'){
+        //         result = 'Tie';
+        //     }
+        //     else if(computerMove1 === 'paper'){
+        //         result = 'Loss';
+        //     }
+        //     if(computerMove1 === 'scissor'){
+        //         result = 'Win';
+        //     }
+        //    console.log('result is: ',result)
+        
+        ">Rock
+        </button>
         <button class="js-paper-btn" onclick="
-        console.log('paper btn clicked')
-        ">Paper</button>
+                    // const playerMove2 = 'paper';
+
+        ">
+            Paper
+        </button>
         <button class="js-scissor-btn" onclick="
-        console.log('scissor btn clicked')
-        ">scissor</button>
+                    // const playerMove3 = 'scissor';
+
+
+        ">
+            scissor
+        </button>
         <button class="js-scissor-btn" onclick="
         console.log('reset btn clicked')
-        ">reset</button>
-        
+        ">
+            reset
+        </button>
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>
