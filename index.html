@@ -35,7 +35,10 @@
             scissor
         </button>
         <button class="js-scissor-btn" onclick="
-        console.log('reset btn clicked')
+        scores.wins = 0;
+        scores.losses = 0;
+        scores.ties = 0;
+        localStorage.removeItem('scores');
         ">
             reset
         </button>

@@ -1,7 +1,15 @@
+let scores = JSON.parse(localStorage.getItem('scores')) || {
+  wins : 0,
+  losses: 0,
+  ties: 0,
+};
+console.log(
+  `scores, win: ${scores.wins}, loss: ${scores.losses}, ties: ${scores.ties}`
+);
+
 function playGames(playerMove) {
   let result = "";
   let computerMove = computerMoves();
-  const scores = JSON.parse(localStorage.getItem('scores'));
 
   if (playerMove === "rock") {
     if (computerMove === "rock") {
@@ -41,9 +49,7 @@ function playGames(playerMove) {
 
 
   localStorage.setItem("scores", JSON.stringify(scores));
-  console.log(
-    `scores, win: ${scores.wins}, loss: ${scores.losses}, ties: ${scores.ties}`
-  );
+
 
 
   document.querySelector(".js-result").innerHTML = `You ${result}`;
