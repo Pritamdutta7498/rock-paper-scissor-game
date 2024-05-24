@@ -38,24 +38,24 @@ function playGames(playerMove) {
     scores.ties += 1;
   }
 
+
+
+  localStorage.setItem("scores", JSON.stringify(scores));
   console.log(
     `scores, win: ${scores.wins}, loss: ${scores.losses}, ties: ${scores.ties}`
   );
-
-  localStorage.setItem("scores", JSON.stringify(scores));
-
 
 
   document.querySelector(".js-result").innerHTML = `You ${result}`;
   document.querySelector(
     ".js-moves"
   ).innerHTML = `You - ${playerMove} | computer - ${computerMove}`;
-  // document.querySelector('.js-scores')
-  //   .innerHTML = `Win,Tie,Loss`;
+  document.querySelector('.js-scores')
+    .innerHTML = `You Wins: ${scores.wins}, Loss:  ${scores.losses}, Tie:  ${scores.ties}`;
 
-  console.log(`your Move: ${playerMove} | computer Move: ${computerMove} 
-  \nresult is: ${result}
-  `);
+  // console.log(`your Move: ${playerMove} | computer Move: ${computerMove} 
+  // \nresult is: ${result}
+  // `);
 }
 
 // function for computerMoves
