@@ -1,4 +1,5 @@
 let result = "";
+
 function playGames(playerMove) {
   let computerMove = computerMoves();
   if (playerMove === "rock") {
@@ -26,6 +27,14 @@ function playGames(playerMove) {
       result = "Tie";
     }
   }
+  document.querySelector('.js-result')
+    .innerHTML = `You ${result}`;
+  document.querySelector('.js-moves')
+    .innerHTML = `You - ${playerMove} | computer - ${computerMove}`;
+  // document.querySelector('.js-scores')
+  //   .innerHTML = `Win,Tie,Loss`;
+  
+  
   console.log(`your Move: ${playerMove} | computer Move: ${computerMove} 
   \nresult is: ${result}
   `);
