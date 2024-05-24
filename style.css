@@ -9,6 +9,7 @@ h1 {
     font-size: 4.5rem;
     font-family: 'Times New Roman', Times, serif;
     text-shadow: 2px 2px 10px rgba(199, 124, 12, 0.89);
+    text-align: center;
 }
 
 .scoreboard {
@@ -16,7 +17,7 @@ h1 {
     width: 500px;
     font: 20px sans-serif;
     height: 150px;
-    border: 2px solid white;
+    border: 2px solid wheat;
     margin: 0px auto;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -24,23 +25,24 @@ h1 {
 
 .dashboard {
     width: 500px;
-    padding: 50px 0;
+    text-align: center;
+    padding: 30px 0;
     height: 400px;
     background-color: rgba(7, 7, 7, 0.788);
-    border: 2px solid transparent;
+    border: 2px solid wheat;
 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     /* border-radius: 10px; */
-    margin: 0 auto;
+    margin: auto;
 
 }
 
 button {
     margin: 10px;
-    background-color: rgba(0, 0, 0, 0.877);
+    background-color: rgba(7, 7, 7, 0.788);
     font-size: 5rem;
-    padding: 30px 30px;
+    padding: 40px 40px;
     cursor: pointer;
     border-radius: 50%;
     border: none;
