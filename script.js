@@ -1,5 +1,5 @@
-let scores = JSON.parse(localStorage.getItem('scores')) || {
-  wins : 0,
+let scores = JSON.parse(localStorage.getItem("scores")) || {
+  wins: 0,
   losses: 0,
   ties: 0,
 };
@@ -7,6 +7,15 @@ console.log(
   `scores, win: ${scores.wins}, loss: ${scores.losses}, ties: ${scores.ties}`
 );
 
+// update score function
+function updateScores() {
+  document.querySelector(".js-result").innerHTML = "-";
+  document.querySelector(".js-moves").innerHTML = "-";
+  document.querySelector(
+    ".js-scores"
+  ).innerHTML = `You Wins: ${scores.wins}, Loss:  ${scores.losses}, Tie:  ${scores.ties}`;
+}
+updateScores();
 function playGames(playerMove) {
   let result = "";
   let computerMove = computerMoves();
@@ -45,23 +54,14 @@ function playGames(playerMove) {
   } else if (result === "Tie") {
     scores.ties += 1;
   }
-
-
-
+  updateScores();
   localStorage.setItem("scores", JSON.stringify(scores));
 
-
-
+  // showing the ui result and moves
   document.querySelector(".js-result").innerHTML = `You ${result}`;
-  document.querySelector(
-    ".js-moves"
-  ).innerHTML = `You - ${playerMove} | computer - ${computerMove}`;
-  document.querySelector('.js-scores')
-    .innerHTML = `You Wins: ${scores.wins}, Loss:  ${scores.losses}, Tie:  ${scores.ties}`;
+  document.querySelector(".js-moves").innerHTML = `You - ${playerMove} | Computer - ${computerMove}`;
 
-  // console.log(`your Move: ${playerMove} | computer Move: ${computerMove} 
-  // \nresult is: ${result}
-  // `);
+
 }
 
 // function for computerMoves
