@@ -13,26 +13,26 @@
     <div class="scoreboard">
         <p class="js-result"></p>
         <p class="js-moves"></p>
-        <p class="js-scores"></p>
+        <p class="js-scores scores-data"></p>
     </div>
     <div class="dashboard">
         <button class="rock-btn" onclick="
             playGames('rock');
         
-        ">Rock
+        ">✊
         </button>
         <button class="paper-btn" onclick="
             playGames('paper');
 
         ">
-            Paper
+            ✋
         </button>
         <button class="scissor-btn" onclick="
 
             playGames('scissor');
 
         ">
-            scissor
+            ✌️
         </button>
         <button class="js-scissor-btn" onclick="
         scores.wins = 0;
@@ -41,7 +41,7 @@
         localStorage.removeItem('scores');
         updateScores();
         ">
-            reset
+            🔄️
         </button>
     </div>
     <script src="./script.js"></script>

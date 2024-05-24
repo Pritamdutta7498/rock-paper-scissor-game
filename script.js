@@ -9,8 +9,8 @@ console.log(
 
 // update score function
 function updateScores() {
-  document.querySelector(".js-result").innerHTML = "-";
-  document.querySelector(".js-moves").innerHTML = "-";
+  document.querySelector(".js-result").innerHTML = "";
+  document.querySelector(".js-moves").innerHTML = "";
   document.querySelector(
     ".js-scores"
   ).innerHTML = `You Wins: ${scores.wins}, Loss:  ${scores.losses}, Tie:  ${scores.ties}`;
