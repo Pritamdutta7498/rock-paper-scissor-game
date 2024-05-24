@@ -1,7 +1,8 @@
-let result = "";
-
 function playGames(playerMove) {
+  let result = "";
   let computerMove = computerMoves();
+  const scores = JSON.parse(localStorage.getItem('scores'));
+
   if (playerMove === "rock") {
     if (computerMove === "rock") {
       result = "Tie";
@@ -27,14 +28,31 @@ function playGames(playerMove) {
       result = "Tie";
     }
   }
-  document.querySelector('.js-result')
-    .innerHTML = `You ${result}`;
-  document.querySelector('.js-moves')
-    .innerHTML = `You - ${playerMove} | computer - ${computerMove}`;
+
+  // set the scores
+  if (result === "Win") {
+    scores.wins += 1;
+  } else if (result === "Loss") {
+    scores.losses += 1;
+  } else if (result === "Tie") {
+    scores.ties += 1;
+  }
+
+  console.log(
+    `scores, win: ${scores.wins}, loss: ${scores.losses}, ties: ${scores.ties}`
+  );
+
+  localStorage.setItem("scores", JSON.stringify(scores));
+
+
+
+  document.querySelector(".js-result").innerHTML = `You ${result}`;
+  document.querySelector(
+    ".js-moves"
+  ).innerHTML = `You - ${playerMove} | computer - ${computerMove}`;
   // document.querySelector('.js-scores')
   //   .innerHTML = `Win,Tie,Loss`;
-  
-  
+
   console.log(`your Move: ${playerMove} | computer Move: ${computerMove} 
   \nresult is: ${result}
   `);
