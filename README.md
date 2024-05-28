@@ -1,6 +1,12 @@
 ﻿# rock-paper-scissor-game
-there will be some steps
-
+<h2> <b>The Game Rules is:</b></h2>
+<pre>
+Rock beats Scissors,
+Scissors beats Paper,
+Paper beats Rock.
+</pre>
+</br>
+<h2>There are some steps to complete this game:</h2>
 
 **step-1:** making random nunmber for computer move and the algo is </br>
 </br>
