@@ -10,40 +10,11 @@
 
 <body>
     <h1>Play rock paper scissor game</h1>
-    <div class="scoreboard">
-        <p class="js-result"></p>
-        <p class="js-moves"></p>
-        <p class="js-scores scores-data"></p>
+    <div class="game-mode">
+        <button class="mode-btn">Play With Friend</button>
+        <button class="mode-btn">Play With Computer</button>
     </div>
-    <div class="dashboard">
-        <button class="rock-btn" onclick="
-            playGames('rock');
-        
-        ">✊
-        </button>
-        <button class="paper-btn" onclick="
-            playGames('paper');
 
-        ">
-            ✋
-        </button>
-        <button class="scissor-btn" onclick="
-
-            playGames('scissor');
-
-        ">
-            ✌️
-        </button>
-        <button class="js-scissor-btn" onclick="
-        scores.wins = 0;
-        scores.losses = 0;
-        scores.ties = 0;
-        localStorage.removeItem('scores');
-        updateScores();
-        ">
-            🔄️
-        </button>
-    </div>
     <script src="./script.js"></script>
 </body>
 

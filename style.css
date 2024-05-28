@@ -12,6 +12,94 @@ h1 {
     text-align: center;
 }
 
+
+.game-mode{
+    margin-top: 100px;
+
+
+}
+/* mode - btn design */
+.mode-btn {
+    padding: 1em 3em;
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.mode-btn:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbtn 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbtn {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.mode-btn:active {
+    color: #000;
+}
+
+.mode-btn:active:after {
+    background: transparent;
+}
+
+.mode-btn:hover:before {
+    opacity: 1;
+}
+
+.mode-btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* mode-btn end */
+
+
 .scoreboard {
     position: relative;
     width: 500px;
@@ -38,7 +126,7 @@ h1 {
 
 }
 
-button {
+.game-btn {
     margin: 10px;
     background-color: rgba(7, 7, 7, 0.788);
     font-size: 5rem;
@@ -50,7 +138,7 @@ button {
 
 }
 
-button:hover {
+.game-btn:hover {
     box-shadow: 0px 0px 10px rgb(252, 252, 252);
     transition: 300ms ease-in;
 }
