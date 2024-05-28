@@ -1,5 +1,5 @@
 ﻿# rock-paper-scissor-game
-**<a href="https://pritamdutta7498.github.io/rock-paper-scissor-game/"> <h2> Play This Game </h2> </a>
+**<a href="https://pritamdutta7498.github.io/rock-paper-scissor-game/"> Play This Game </a>
 </br>**
 <h2> <b>The Game Rules is:</b></h2>
 <pre>
