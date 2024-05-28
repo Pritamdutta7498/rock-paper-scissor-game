@@ -2,7 +2,6 @@ body {
     background-color: #191919;
     color: aliceblue;
     text-align: center;
-
 }
 
 h1 {
@@ -16,11 +15,11 @@ h1 {
     margin-top: 100px;
     text-decoration: none;
 }
+
 /* mode - btn design */
 .mode-btn {
     padding: 1em 3em;
-    margin-left: 10px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     outline: none;
     color: rgb(255, 255, 255);
@@ -97,16 +96,17 @@ h1 {
 
 /* mode-btn end */
 
-.home-btn{
-margin-bottom: 50px;
+.home-btn {
+    margin-bottom: 50px;
 }
 
 .scoreboard {
     position: relative;
+    padding: 20px;
     width: 500px;
     font: 20px sans-serif;
     height: 150px;
-    border:2px solid wheat;
+    border: 2px solid wheat;
     margin: 0px auto;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -115,34 +115,31 @@ margin-bottom: 50px;
 
 .dashboard {
     width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
     text-align: center;
-    padding: 30px 0;
-    height: 400px;
+    padding: 30px 20px;
     background-color: rgba(7, 7, 7, 0.788);
     border: 2px solid wheat;
-
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    /* border-radius: 10px; */
     margin: auto;
-
-
 }
 
 .game-btn {
-    margin: 10px;
     background-color: rgba(7, 7, 7, 0.788);
     font-size: 5rem;
-    padding: 40px 40px;
+    padding: 30px 60px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 10px;
     border: 1px solid rgb(143, 141, 141);
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
 
 }
 
 .game-btn:hover {
-    box-shadow: 0px 0px 10px rgb(252, 252, 252);
+    box-shadow: 0px 0px 10px rgb(9, 136, 255);
     transition: 300ms ease-in;
 }
 
@@ -152,4 +149,56 @@ margin-bottom: 50px;
     left: 0;
     right: 0;
 
+}
+
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+
+    }
+
+    ;
+
+    .scoreboard {
+        width: 100%;
+        margin: 20px;
+    }
+
+    ;
+
+    .dashboard {
+        width: 100%;
+        margin: 20px;
+    }
+
+    ;
+
+    .game-btn {
+        font-size: 50px;
+        padding: 20px 30px;
+        margin: 5px;
+    }
+
+    ;
+}
+
+/* Smaller mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+   
+    .scoreboard {
+        width: 300px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .dashboard {
+        width: 300px;
+        height: 200px;
+    }
+
+    .game-btn {
+        font-size: 50px;
+        padding: 10px 20px;
+    }
 }
